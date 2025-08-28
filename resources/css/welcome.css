@@ -1,0 +1,74 @@
+.gradient-bg {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.skill-bar {
+    height: 4px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 2px;
+    animation: loadBar 2s ease-in-out;
+}
+
+nav {
+    transition: all 0.3s ease;
+}
+
+nav.scrolled {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.95), rgba(118, 75, 162, 0.95));
+    backdrop-filter: blur(10px);
+}
+
+nav .nav-link {
+    color: white;
+}
+
+nav .nav-link:hover {
+    color: #fde68a;
+}
+
+nav .nav-logo {
+    color: #facc15;
+}
+
+@keyframes loadBar {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.typing-effect {
+    border-right: 2px solid #667eea;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    50% {
+        border-color: transparent;
+    }
+
+    51%,
+    100% {
+        border-color: #667eea;
+    }
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0);
+}
