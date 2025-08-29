@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <?php echo app('Illuminate\Foundation\Vite')(['resources/css/welcome.css', 'resources/js/welcome.js']); ?>
-<?php
+    <link rel="icon" type="png" sizes="32x32" href="<?php echo e(asset('images/icon.png')); ?>">
+    
+    <?php
     date_default_timezone_set('America/Sao_Paulo');
     $hour = (int) date('H');
     if ($hour >= 5 && $hour < 12) {
