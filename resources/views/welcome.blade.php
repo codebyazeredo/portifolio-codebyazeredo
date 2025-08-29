@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     @vite(['resources/css/welcome.css', 'resources/js/welcome.js'])
-</head>
-
 @php
     date_default_timezone_set('America/Sao_Paulo');
     $hour = (int) date('H');
@@ -36,7 +34,7 @@
         <x-hero 
             name="Matheus de Azeredo" 
             title="{{ $greeting }}, eu sou"
-            subtitle="Desenvolvedor de Software Full Stack Web & IoT PHP/Laravel/Laminas, Java/Spring e JavaScript"
+            subtitle="Desenvolvedor de Software Full Stack Web com experiência técnica nas linguagens PHP, Java e JavaScript, além de Frameworks como Laravel, Laminas e Spring Boot." 
             location="Criciúma, SC" 
             :ctaPrimary="['href' => '#contact', 'label' => 'Entre em Contato']"
             :ctaSecondary="['href' => 'https://github.com/codebyazeredo', 'label' => 'Ver Projetos no GitHub']" 
@@ -50,18 +48,20 @@
     <section id="about" class="py-20 bg-white">
         <x-about 
             title="Sobre Mim" 
-            :paragraphs="
-                [
-                'Sou desenvolvedor Full Stack com experiência em aplicações web e projetos de IoT, atuando com Java (Spring Boot), PHP (Laravel, Laminas) e JavaScript.',
-                'No front-end, utilizo HTML, CSS, Tailwind, Bootstrap e jQuery para interfaces responsivas e dinâmicas. No back-end, desenvolvo APIs REST, WebSockets e microsserviços em cloud (AWS e Azure), com bancos MySQL, Oracle e SQL Server.',
-                'Em IoT, trabalho com Arduino, C e MQTT para automações e sistemas embarcados. Busco sempre soluções eficientes, escaláveis e que atendam às necessidades reais dos clientes.'
-            ]" 
+            :paragraphs="[
+                'Sou desenvolvedor Full Stack com experiência em aplicações web, atuando com Java (Spring Boot), PHP (Laravel, Laminas) e JavaScript.',
+                'No front-end, desenvolvo interfaces modernas e responsivas utilizando HTML, CSS, Tailwind, Bootstrap e jQuery e Javascript. No back-end, Desenvolvo desde o zero APIs REST, microsserviços e soluções em tempo real com WebSockets, integrando bancos de dados relacionais como MySQL, Oracle e SQL Server, além de trabalhar em ambientes cloud (AWS e Azure).',
+                'Meu foco é sempre entregar soluções escaláveis, seguras e alinhadas às necessidades do cliente.'
+            ]"
+
             :skills="[
-                ['icon' => 'fas fa-server', 'label' => 'Desenvolvimento Back-end'],
+                ['icon' => 'fas fa-database', 'label' => 'Modelagem & Bancos de Dados'],
+                ['icon' => 'fas fa-code', 'label' => 'Desenvolvimento Back-end (PHP & Java)'],
                 ['icon' => 'fas fa-laptop-code', 'label' => 'Desenvolvimento Front-end'],
-                ['icon' => 'fas fa-microchip', 'label' => 'Microserviços & Cloud'],
-                ['icon' => 'fas fa-cloud', 'label' => 'RestFull APIs']
-            ]" />
+                ['icon' => 'fas fa-project-diagram', 'label' => 'APIs REST & Integrações'],
+                ['icon' => 'fas fa-shield-alt', 'label' => 'Boas Práticas & Segurança']
+            ]"    
+        />
     </section>
 
     <section id="experience" class="py-20 bg-gray-100">
@@ -74,10 +74,10 @@
                 'period' => 'Mar/2025 - Atual (6 meses)',
                 'mode' => 'Remoto',
                 'description' => [
-                    'Desenvolvimento, manutenção evolutiva e corretiva de sistemas voltados à gestão pública',
-                    'Uso de PHP, Java, MySQL, APIs REST, Laravel e POO'
+                    'Atuo ativamente no desenvolvimento de produto e manutenção evolutiva de sistemas web voltados à area da gestão pública',
+                    'Uso de PHP, Java, MySQL, APIs REST, Laravel, Laminas, MySQL'
                 ],
-                'skills' => ['PHP', 'Java', 'Laravel', 'MySQL', 'APIs REST']
+                'skills' => ['PHP', 'Java', 'Laravel', 'Laminas', 'MySQL', 'APIs REST']
             ],
             [
                 'position' => 'Desenvolvedor de Software',
@@ -86,8 +86,8 @@
                 'period' => 'Período anterior',
                 'mode' => 'Presencial',
                 'description' => [
-                    'Desenvolvimento e manutenção de sistemas corporativos',
-                    'Uso de PHP, Laravel, JavaScript, jQuery e SQL Server'
+                    'Atuei no desenvolvimento e manutenção evolutiva de sistemas web voltados à indústrias de grande porte',
+                    'Usei de PHP, Laravel, JavaScript, jQuery e SQL Server'
                 ],
                 'skills' => ['PHP', 'Laravel', 'JavaScript', 'jQuery', 'SQL Server']
             ]
@@ -96,66 +96,65 @@
 
     <section id="skills" class="py-20 bg-white">
         <x-skills :categories="
-            [
+        [
             [
                 'name' => 'Linguagens',
                 'icon' => 'fas fa-code',
                 'skills' => [
-                    ['name' => 'Java', 'level' => '90%'],
-                    ['name' => 'PHP', 'level' => '85%'],
-                    ['name' => 'JavaScript', 'level' => '80%'],
+                    ['name' => 'PHP', 'level' => '90%', 'icon' => 'fab fa-php'],
+                    ['name' => 'Java', 'level' => '85%', 'icon' => 'fab fa-java'],
+                    ['name' => 'JavaScript', 'level' => '80%', 'icon' => 'fab fa-js'],
                 ]
             ],
             [
                 'name' => 'Frameworks',
                 'icon' => 'fas fa-cogs',
                 'skills' => [
-                    ['name' => 'Spring Boot'],
-                    ['name' => 'Laravel'],
-                    ['name' => 'Laminas'],
-                    ['name' => 'jQuery']
+                    ['name' => 'Spring Boot', 'icon' => 'fas fa-leaf'], 
+                    ['name' => 'Laravel', 'icon' => 'fab fa-laravel'],
+                    ['name' => 'Laminas', 'icon' => 'fas fa-stream'],   
+                    ['name' => 'jQuery', 'icon' => 'fas fa-code'],      
                 ]
             ],
             [
                 'name' => 'Front-end',
                 'icon' => 'fas fa-paint-brush',
                 'skills' => [
-                    ['name' => 'HTML5'],
-                    ['name' => 'CSS3'],
-                    ['name' => 'Tailwind'],
-                    ['name' => 'Bootstrap']
+                    ['name' => 'HTML5', 'icon' => 'fab fa-html5'],
+                    ['name' => 'CSS3', 'icon' => 'fab fa-css3-alt'],
+                    ['name' => 'Bootstrap', 'icon' => 'fab fa-bootstrap'],
+                    ['name' => 'Tailwind', 'icon' => 'fas fa-wind'], 
                 ]
             ],
             [
                 'name' => 'Banco de Dados',
                 'icon' => 'fas fa-database',
                 'skills' => [
-                    ['name' => 'MySQL'],
-                    ['name' => 'Oracle'],
-                    ['name' => 'PostgreSQL'],
-                    ['name' => 'SQL Server']
+                    ['name' => 'MySQL', 'icon' => 'fas fa-database'],
+                    ['name' => 'Oracle', 'icon' => 'fas fa-database'],
+                    ['name' => 'PostgreSQL', 'icon' => 'fas fa-database'],
+                    ['name' => 'SQL Server', 'icon' => 'fas fa-database'],
                 ]
             ],
             [
                 'name' => 'Ferramentas',
                 'icon' => 'fas fa-tools',
                 'skills' => [
-                    ['name' => 'Git'],
-                    ['name' => 'Docker'],
-                    ['name' => 'Postman']
+                    ['name' => 'Git', 'icon' => 'fab fa-git-alt'],
+                    ['name' => 'Docker', 'icon' => 'fab fa-docker'],
+                    ['name' => 'Postman', 'icon' => 'fas fa-paper-plane'],
                 ]
             ],
             [
-                'name' => 'Cloud & IoT',
+                'name' => 'Cloud',
                 'icon' => 'fas fa-cloud',
                 'skills' => [
-                    ['name' => 'AWS'],
-                    ['name' => 'Azure'],
-                    ['name' => 'Arduino'],
-                    ['name' => 'MQTT']
+                    ['name' => 'AWS', 'icon' => 'fab fa-aws'],
+                    ['name' => 'Azure', 'icon' => 'fab fa-microsoft'],
                 ]
             ]
         ]" />
+        
     </section>
 
     <section id="projects" class="py-20 bg-gray-50">
@@ -173,7 +172,8 @@
         ['label' => 'Localização', 'value' => 'Criciúma, SC', 'icon' => 'fas fa-map-marker-alt']
     ]" :socials="[
         ['href' => 'https://linkedin.com/in/codebyazeredo', 'icon' => 'fab fa-linkedin'],
-        ['href' => 'https://github.com/codebyazeredo', 'icon' => 'fab fa-github']
+        ['href' => 'https://github.com/codebyazeredo', 'icon' => 'fab fa-github'],
+        ['href' => 'https://www.instagram.com/matheusaazeredo/#', 'icon' => 'fab fa-instagram'],
     ]" />
     </section>
 
